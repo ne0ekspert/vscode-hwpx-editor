@@ -1,24 +1,20 @@
 {
-  "publisher": "antfu",
-  "name": "ext-name",
-  "displayName": "ext-name",
+  "publisher": "ne0ekspert",
+  "name": "vscode-hwpx-editor",
+  "displayName": "vscode-hwpx-editor",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.4.1",
   "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Seonho Byeon <dragunov7072@gmail.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/ext-name#readme",
+  "homepage": "https://github.com/ne0ekspert/vscode-hwpx-editor#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antfu/ext-name"
+    "url": "https://github.com/ne0ekspert/vscode-hwpx-editor"
   },
   "bugs": {
-    "url": "https://github.com/antfu/ext-name/issues"
-  },
-  "sponsor": {
-    "url": "https://github.com/sponsors/antfu"
+    "url": "https://github.com/ne0ekspert/vscode-hwpx-editor/issues"
   },
   "categories": [
     "Other"
@@ -42,7 +38,18 @@
       "type": "object",
       "title": "ext-name",
       "properties": {}
-    }
+    },
+    "customEditors": [
+      {
+        "viewType": "vscode-hwpx-editor.hwpxEditor",
+        "displayName": "HWPX Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.hwpx"
+          }
+        ]
+      }
+    ]
   },
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
