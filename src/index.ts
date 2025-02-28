@@ -1,8 +1,8 @@
 import { defineExtension } from 'reactive-vscode'
-import { window } from 'vscode'
+import { HWPXEditorProvider } from './provider'
 
-const { activate, deactivate } = defineExtension(() => {
-  window.showInformationMessage('Hello')
+const { activate, deactivate } = defineExtension((context) => {
+  context.subscriptions.push(HWPXEditorProvider.register(context))
 })
 
 export { activate, deactivate }
